@@ -1,6 +1,10 @@
 print("Test!!")
 
-### new comments here
-print("another test value")
+#### first function
 
-print("finally another print statement here")
+def myFirstFunction(x, y):
+    sum = x + y
+    return sum + 1
+
+### new comments here
+print(myFirstFunction(3,4))
