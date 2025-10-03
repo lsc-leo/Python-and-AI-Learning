@@ -17,6 +17,6 @@ else:
 #F-Strings are powerful
 def weirdStringStuff():
     amount = 12
-
+    ### if I now add new stuff here and push it to NewFeatures, then main will be behind and I need to pull from NewFeatures once I switch path
     output = f"{inputStr} has exactly {amount:.2f} dollars, which is half of {amount * 2:.2f}."
     print(output)
