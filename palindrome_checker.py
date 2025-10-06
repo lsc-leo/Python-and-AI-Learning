@@ -24,7 +24,7 @@ def weirdStringStuff(inputStr):
 # Online variant, smoother
 def online_palindrome_version(word):
   
-  reversed_word = word[::-1]
+  reversed_word = word[::-1] #This :: operation basically reverts a list step by step
 
   if reversed_word == word:
     return True
