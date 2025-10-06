@@ -1,3 +1,10 @@
+'''
+rules:
+- each row can only contain each digit once
+- each column can only contain each digit once
+- each 3x3 square can only contain each digit once
+'''
+
 board = [[0, 0, 3, 0, 0, 0, 0, 0, 7],
          [4, 2, 0, 0, 9, 1, 0, 0, 0],
          [0, 1, 5, 0, 6, 8, 3, 0, 0],
@@ -12,8 +19,21 @@ board = [[0, 0, 3, 0, 0, 0, 0, 0, 7],
 #for row in board:
 #    print(row)
 
+def normal_board():
+    for oInd, row in enumerate(board):
+        for iInd, num in enumerate(row):
+            print(num, end=" ")
+        print()
+        
+normal_board()
 
-for row in board:
-    for num in row:
-        print(num, end=" ")
-    print()
+
+def fancy_board_verions():
+    for outerInd, row in enumerate(board):
+        for ind, num in enumerate(row):
+            print(num, end=" ")
+            if (ind+1) % 3 == 0 and ind != 8:
+                print("|", end = "")
+        print()
+        if (outerInd + 1) % 3 == 0 and outerInd != 8:
+            print("-------------------") 
